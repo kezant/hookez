@@ -1,7 +1,7 @@
 {
-  "name": "pkg",
+  "name": "hookez",
   "version": "1.0.0",
-  "description": "A template for packages",
+  "description": "Useful React hooks!",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -17,21 +17,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/keznet/package.git"
+    "url": "git+https://github.com/keznet/hookez.git"
   },
   "keywords": [
-    "Package",
-    "Template",
-    "Boilerplate"
+    "React",
+    "Hooks"
   ],
   "author": "keznet",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/keznet/package/issues"
+    "url": "https://github.com/keznet/hookez/issues"
   },
-  "homepage": "https://github.com/keznet/package#readme",
+  "homepage": "https://github.com/keznet/hookez#readme",
   "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
     "prettier": "^2.7.1",
+    "react": "^18.2.0",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.9.3"
