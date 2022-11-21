@@ -99,3 +99,24 @@ const MyComponent = () => {
   )
 }
 ```
+
+### **useSizes**
+
+This hook returns an object containing the current (inner) width and height of the window.
+
+#### Usage
+
+```js
+import { useEffect, createRef } from 'react';
+import { useSizes } from 'hookez';
+
+const MyComponent = () => {
+  const { width, height } = useSizes();
+
+  return (
+    <p>
+      The window width is {width} and the height is {height}
+    </p>
+  );
+};
+```
