@@ -29,3 +29,7 @@ Hookez was built on Typescript, so types are included in the package without the
 ## Hooks available
 
 ### **useKeyPress**
+
+### **useOnScreen**
+
+### **useOnFound**
