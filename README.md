@@ -34,7 +34,7 @@ Hookez was built on Typescript, so types are included in the package without the
 
 ### **useKeyPress**
 
-This hook returns a boolean to indicate whether a specific key is being pressed of not.
+This hook returns a boolean to indicate whether a specific key is being pressed or not.
 
 #### Usage
 
@@ -55,12 +55,12 @@ This hook returns a boolean indicating when a component/element is visible on sc
 #### Usage
 
 ```js
-import { useEffect, createRef } from 'react'
-import { useOnScreen } from 'hookez'
+import { useEffect, createRef } from 'react';
+import { useOnScreen } from 'hookez';
 
 const MyComponent = () => {
-  const ref = createRef<HTMLElement>()
-  const isOnScreen = useOnScreen(ref)
+  const ref = createRef<HTMLElement>();
+  const isOnScreen = useOnScreen(ref);
 
   useEffect(() => {
     if (isOnScreen) {
@@ -81,12 +81,12 @@ A bit similar to useOnScreen. This hook returns a boolean indicating if a compon
 #### Usage
 
 ```js
-import { useEffect, createRef } from 'react'
-import { useOnFound } from 'hookez'
+import { useEffect, createRef } from 'react';
+import { useOnFound } from 'hookez';
 
 const MyComponent = () => {
-  const ref = createRef<HTMLElement>()
-  const isFound = useOnFound(ref)
+  const ref = createRef<HTMLElement>();
+  const isFound = useOnFound(ref);
 
   useEffect(() => {
     if (isFound) {
