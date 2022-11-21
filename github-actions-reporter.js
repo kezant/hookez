@@ -1,6 +1,4 @@
 class GithubActionsReporter {
-  _globalConfig: any;
-  _options: any;
   constructor(globalConfig, options) {
     this._globalConfig = globalConfig;
     this._options = options;
