@@ -3,7 +3,7 @@
  */
 
 import { renderHook, act } from '@testing-library/react';
-import { useKeyPress } from '../index';
+import { useKeyPress } from '../hooks/useKeyPress';
 
 test('should return true whether a key is pressed', () => {
   const key = 'Enter';
