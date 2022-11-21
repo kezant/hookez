@@ -5,7 +5,7 @@
 import { renderHook, act } from '@testing-library/react';
 import { useKeyPress } from '../hooks/useKeyPress';
 
-test('should return true whether a key is pressed', () => {
+test('should return true when a key is pressed', () => {
   const key = 'Enter';
   const { result, rerender } = renderHook(() => useKeyPress(key));
 

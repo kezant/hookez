@@ -1,5 +1,7 @@
 # Hookez
 
+![Tests CI](https://github.com/keznet/hookez/actions/workflows/tests.yml/badge.svg)
+
 Hookez is a set of React Hooks that can be helpful to your project.
 
 ## Getting Started
