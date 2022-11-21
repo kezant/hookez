@@ -2,23 +2,24 @@ import React from 'react';
 
 /**
  * Find out if a specific key is being pressed
+ *
  * @param {string} targetKey The target key name
  * @returns {boolean} Whether the targeted key is pressed or not
  */
-export function useKeyPress(targetKey: string) {
+export const useKeyPress = (targetKey: string) => {
   const [keyPressed, setKeyPressed] = React.useState(false);
 
-  function handleDown({ key }: KeyboardEvent) {
+  const handleDown = ({ key }: KeyboardEvent) => {
     if (key === targetKey) {
       setKeyPressed(true);
     }
-  }
+  };
 
-  function handleUp({ key }: KeyboardEvent) {
+  const handleUp = ({ key }: KeyboardEvent) => {
     if (key === targetKey) {
       setKeyPressed(false);
     }
-  }
+  };
 
   React.useEffect(() => {
     window.addEventListener('keydown', handleDown);
@@ -31,4 +32,4 @@ export function useKeyPress(targetKey: string) {
   }, []);
 
   return keyPressed;
-}
+};
