@@ -9,7 +9,7 @@
     "test:ci": "jest --ci --reporters='default' --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint -c .eslintrc.js --ext .ts ./src",
+    "lint": "eslint -c .eslintrc --ext .ts ./src",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
