@@ -1,3 +1,4 @@
+'use client';
 import React, { RefObject } from 'react';
 
 /**
@@ -11,19 +12,21 @@ export const useOnFound = (ref: RefObject<HTMLElement>): boolean => {
   const [isFound, setFound] = React.useState(false);
 
   const observer = React.useMemo(() => {
-    return new IntersectionObserver(([entry]) => {
-      setIntersecting(entry.isIntersecting);
+    return typeof IntersectionObserver !== 'undefined'
+      ? new IntersectionObserver(([entry]) => {
+          setIntersecting(entry.isIntersecting);
 
-      if (isIntersecting || isFound || entry.isIntersecting) {
-        setFound(true);
-      }
-    });
+          if (isIntersecting || isFound || entry.isIntersecting) {
+            setFound(true);
+          }
+        })
+      : null;
   }, []);
 
   React.useEffect(() => {
-    if (ref.current) observer.observe(ref.current);
+    if (ref.current) observer?.observe(ref.current);
     return () => {
-      observer.disconnect();
+      observer?.disconnect();
     };
   }, [observer, ref]);
 
